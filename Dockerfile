@@ -1,4 +1,4 @@
-FROM cuhkhaosun/base
+FROM cuhkhaosun/conda
 
 WORKDIR /app
 
