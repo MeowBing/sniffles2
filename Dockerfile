@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN mkdir sniffles2 \
     && cd sniffles2 \
-    && conda install sniffles=2.0
+    && conda install bioconda::sniffles
 
 ENV PATH="/app/sniffles2:${PATH}"
 
