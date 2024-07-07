@@ -1,4 +1,4 @@
-FROM cuhkhaosun/conda
+FROM cuhkhaosun/conda：miniconda
 
 WORKDIR /app
 
