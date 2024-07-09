@@ -1,17 +1,16 @@
-FROM cuhkhaosun/conda:miniconda
+FROM cuhkhaosun/base
 
-
-RUN conda config --add channels bioconda \
-    && conda config --add channels conda-forge
-    
 WORKDIR /app
 
+# 安装必要的构建工具和依赖项
+RUN apt-get update && \
+    apt-get install -y build-essential
+
+# 创建目录并安装 Sniffles
 RUN mkdir sniffles2 \
     && cd sniffles2 \
-    && conda install sniffles=2.4
+    && pip install sniffles
 
 ENV PATH="/app/sniffles2:${PATH}"
 
-
 CMD ["bash"]
-
