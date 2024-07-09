@@ -1,7 +1,8 @@
 FROM cuhkhaosun/conda:miniconda
 
 
-RUN conda config --add channels bioconda
+RUN conda config --add channels bioconda \
+    && conda config --add channels conda-forge
     
 WORKDIR /app
 
