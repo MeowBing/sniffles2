@@ -4,7 +4,10 @@ WORKDIR /app
 
 RUN mkdir sniffles2 \
     && cd sniffles2 \
-    && conda install bioconda/label/main::sniffles
+    && conda config --add channels bioconda \
+    && conda config --add channels conda-forge \
+    && conda install edlib \
+    && conda install sniffles=2.4
 
 ENV PATH="/app/sniffles2:${PATH}"
 
