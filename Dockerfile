@@ -1,5 +1,8 @@
 FROM cuhkhaosun/conda:miniconda
 
+
+RUN conda config --add channels bioconda
+    
 WORKDIR /app
 
 RUN mkdir sniffles2 \
